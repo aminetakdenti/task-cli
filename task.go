@@ -10,6 +10,17 @@ const (
 	StatusDone       Status = "done"
 )
 
+const (
+	Add    = "add"
+	Update = "update"
+	Delete = "delete"
+	List   = "list"
+
+	MarkTodo       = "mark-todo"
+	MarkInProgress = "mark-in-progress"
+	MarkDone       = "mark-done"
+)
+
 const TaskPath = "task.json"
 
 type Task struct {
