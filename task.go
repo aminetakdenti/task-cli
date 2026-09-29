@@ -1,0 +1,25 @@
+package main
+
+import "time"
+
+type Status string
+
+const (
+	StatusTodo       Status = "todo"
+	StatusInProgress Status = "in-progress"
+	StatusDone       Status = "done"
+)
+
+const TaskPath = "task.json"
+
+type Task struct {
+	Id          int       `json:"id"`
+	Description string    `json:"description"`
+	Status      Status    `json:"status"`
+	CreatedAt   time.Time `json:"createdAt"`
+	UpdatedAt   time.Time `json:"updatedAt"`
+}
+
+type Tasks struct {
+	path string
+}
